@@ -1,10 +1,10 @@
 streamlit
 pandas
-numpy
+numpy==2.2.6
 pillow
 plotly
-scikit-learn
-joblib
+scikit-learn==1.7.2
+joblib==1.5.3
 sentence-transformers
 torch
 torchvision
