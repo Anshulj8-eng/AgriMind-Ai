@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+pillow
+plotly
+scikit-learn
+joblib
+sentence-transformers
+requests
+groq
+python-dotenv
+tensorflow
