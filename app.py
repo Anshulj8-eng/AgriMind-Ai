@@ -2873,8 +2873,7 @@ elif page == "🌿 Disease Detection":
                     disease = str(disease).strip()
 
 
-                    # Get disease information
-                    disease_info = get_disease_info(disease)
+    
 
 
                     # Display prediction
