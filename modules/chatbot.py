@@ -1,14 +1,22 @@
 import os
+import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
 
 # =========================================================
-# LOAD ENVIRONMENT
+# LOAD ENVIRONMENT / STREAMLIT SECRETS
 # =========================================================
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+try:
+    GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
+except Exception:
+    GROQ_API_KEY = None
+
+# Allow local .env as fallback
+if not GROQ_API_KEY:
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 MODEL_NAME = "openai/gpt-oss-120b"
 
