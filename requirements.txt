@@ -6,6 +6,8 @@ plotly
 scikit-learn
 joblib
 sentence-transformers
+torch
+torchvision
 requests
 groq
 python-dotenv
