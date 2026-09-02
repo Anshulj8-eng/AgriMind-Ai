@@ -2871,6 +2871,16 @@ elif page == "🌿 Disease Detection":
 
                     # Clean disease name
                     disease = str(disease).strip()
+                    # Get disease information from CSV
+                    matched_info = disease_info_df[
+                        disease_info_df["disease"].str.strip().str.lower()
+                        == disease.strip().lower()
+                    ]
+
+                    if not matched_info.empty:
+                        disease_info = matched_info.iloc[0].to_dict()
+                    else:
+                        disease_info = {}
 
 
     
@@ -2948,7 +2958,7 @@ elif page == "🌿 Disease Detection":
 
                     st.write(
                         disease_info.get(
-                            "cause",
+                            "causes",
                             "Information not available."
                         )
                     )
